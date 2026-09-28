@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Consulta los análisis clínicos y servicios de LunaLab en Guayaquil. Escríbenos por WhatsApp para recibir información."
+    />
+    <meta name="theme-color" content="#f5f7f2" />
+    <title>Servicios de laboratorio | LunaLab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="LunaLab, inicio">
+        <img class="brand-logo" src="logo.JPG" alt="Logo de LunaLab" />
+        <span class="brand-name">Luna<span>Lab</span></span>
+      </a>
+      <a class="header-contact" href="https://wa.me/593998201218" target="_blank" rel="noreferrer">
+        Solicitar <span aria-hidden="true">↗</span>
+      </a>
+    </header>
+
+    <main id="inicio">
+      <section class="intro" aria-labelledby="page-title">
+        <div class="intro-copy">
+          <p class="eyebrow"><span class="status-dot"></span> Laboratorio clínico en Guayaquil</p>
+          <h1 id="page-title">Tu salud, con respuestas <span>claras.</span></h1>
+          <p class="intro-description">
+            Encuentra el análisis que necesitas y consúltalo directamente con nuestro equipo.
+          </p>
+        </div>
+        <div class="intro-note" aria-label="Información de atención">
+          <span class="note-label">ATENCIÓN</span>
+          <p>Lun a vie <strong>8:00 a 16:00</strong></p>
+          <p>Sábados <strong>8:00 a 14:30</strong></p>
+        </div>
+      </section>
+
+      <section class="directory" aria-labelledby="directory-title">
+        <div class="directory-heading">
+          <div>
+            <p class="eyebrow">DIRECTORIO DE SERVICIOS</p>
+            <h2 id="directory-title">¿Qué análisis buscas?</h2>
+          </div>
+          <p class="service-count" id="service-count" aria-live="polite"></p>
+        </div>
+
+        <label class="search-box" for="service-search">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+            <circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" stroke-width="1.8" />
+            <path d="m16 16 4.2 4.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+          <input
+            id="service-search"
+            type="search"
+            placeholder="Busca un análisis o perfil..."
+            autocomplete="off"
+          />
+          <kbd>/</kbd>
+        </label>
+
+        <nav class="category-filters" id="category-filters" aria-label="Filtrar servicios por categoría"></nav>
+        <div class="service-grid" id="service-grid" aria-live="polite"></div>
+        <p class="empty-state" id="empty-state" hidden>No encontramos ese análisis. Prueba con otro término.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-name">Luna<span>Lab</span></span>
+        <p>Atención cercana, resultados confiables.</p>
+      </div>
+      <div class="footer-detail">
+        <span class="footer-label">VISÍTANOS</span>
+        <p>Gómez Rendón 4822, entre la 25ava y 26ava<br />Guayaquil, Ecuador</p>
+      </div>
+      <a class="footer-link" href="https://wa.me/593998201218" target="_blank" rel="noreferrer">
+        Solicitar por WhatsApp <span aria-hidden="true">↗</span>
+      </a>
+    </footer>
+  </body>
+</html>
