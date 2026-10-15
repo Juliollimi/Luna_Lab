@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.lunalab.ec/sitemap.xml
+Sitemap: https://www.lunalab.org/sitemap.xml
