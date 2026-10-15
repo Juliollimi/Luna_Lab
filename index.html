@@ -1,91 +1,394 @@
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Consulta los análisis clínicos y servicios de LunaLab en Guayaquil. Escríbenos por WhatsApp para recibir información."
-    />
-    <meta name="theme-color" content="#f5f7f2" />
-    <title>Servicios de laboratorio | LunaLab</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="brand" href="#inicio" aria-label="LunaLab, inicio">
-        <img class="brand-logo" src="logo.JPG" alt="Logo de LunaLab" />
-        <span class="brand-name">Luna<span>Lab</span></span>
-      </a>
-      <a class="header-contact" href="https://wa.me/593998201218" target="_blank" rel="noreferrer">
-        Solicitar <span aria-hidden="true">↗</span>
-      </a>
-    </header>
+<!DOCTYPE html>
+<html lang="es-EC">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <main id="inicio">
-      <section class="intro" aria-labelledby="page-title">
-        <div class="intro-copy">
-          <p class="eyebrow"><span class="status-dot"></span> Laboratorio clínico en Guayaquil</p>
-          <h1 id="page-title">Tu salud, con respuestas <span>claras.</span></h1>
-          <p class="intro-description">
-            Encuentra el análisis que necesitas y consúltalo directamente con nuestro equipo.
-          </p>
-        </div>
-        <div class="intro-note" aria-label="Información de atención">
-          <span class="note-label">ATENCIÓN</span>
-          <p>Lun a vie <strong>8:00 a 16:00</strong></p>
-          <p>Sábados <strong>8:00 a 14:30</strong></p>
-        </div>
-      </section>
+<title>Luna Lab | Laboratorio clínico en Guayaquil, también a domicilio</title>
+<meta name="description" content="Laboratorio clínico en Guayaquil: hematología, química sanguínea, hormonas, pruebas de embarazo, cultivos y COVID-19. Atención en el laboratorio y toma de muestras a domicilio. Agenda por WhatsApp.">
+<meta name="keywords" content="laboratorio clínico Guayaquil, exámenes de laboratorio a domicilio Guayaquil, exámenes de sangre Guayaquil, prueba de embarazo Guayaquil, hemocultivo Guayaquil, prueba COVID-19 Guayaquil, Luna Lab">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Luna Lab">
+<meta name="theme-color" content="#0E2C52">
 
-      <section class="directory" aria-labelledby="directory-title">
-        <div class="directory-heading">
-          <div>
-            <p class="eyebrow">DIRECTORIO DE SERVICIOS</p>
-            <h2 id="directory-title">¿Qué análisis buscas?</h2>
-          </div>
-          <p class="service-count" id="service-count" aria-live="polite"></p>
-        </div>
+<!-- SEO local: Ecuador, Guayaquil -->
+<meta name="geo.region" content="EC-G">
+<meta name="geo.placename" content="Guayaquil">
+<link rel="canonical" href="https://www.lunalab.ec/">
+<link rel="alternate" hreflang="es-EC" href="https://www.lunalab.ec/">
 
-        <label class="search-box" for="service-search">
-          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
-            <circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" stroke-width="1.8" />
-            <path d="m16 16 4.2 4.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
-          </svg>
-          <input
-            id="service-search"
-            type="search"
-            placeholder="Busca un análisis o perfil..."
-            autocomplete="off"
-          />
-          <kbd>/</kbd>
-        </label>
+<!-- Vista previa al compartir por WhatsApp, Facebook, Instagram, etc. -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_EC">
+<meta property="og:site_name" content="Luna Lab">
+<meta property="og:title" content="Luna Lab | Laboratorio clínico en Guayaquil">
+<meta property="og:description" content="Exámenes de laboratorio en nuestro local o en tu casa. Agenda por WhatsApp: +593 99 820 1218.">
+<meta property="og:url" content="https://www.lunalab.ec/">
+<meta property="og:image" content="https://www.lunalab.ec/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Luna Lab, laboratorio clínico en Guayaquil. En laboratorio, lo mejor.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Luna Lab | Laboratorio clínico en Guayaquil">
+<meta name="twitter:description" content="Exámenes de laboratorio en nuestro local o en tu casa.">
+<meta name="twitter:image" content="https://www.lunalab.ec/og-image.jpg">
 
-        <nav class="category-filters" id="category-filters" aria-label="Filtrar servicios por categoría"></nav>
-        <div class="service-grid" id="service-grid" aria-live="polite"></div>
-        <p class="empty-state" id="empty-state" hidden>No encontramos ese análisis. Prueba con otro término.</p>
-      </section>
-    </main>
+<!-- Íconos (aparecen en la pestaña y junto al resultado de Google) -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 
-    <footer class="site-footer">
-      <div class="footer-brand">
-        <span class="brand-name">Luna<span>Lab</span></span>
-        <p>Atención cercana, resultados confiables.</p>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Datos estructurados: ayudan a Google a mostrar Luna Lab en búsquedas locales -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "@id": "https://www.lunalab.ec/#laboratorio",
+  "name": "Luna Lab",
+  "alternateName": "Luna Lab Laboratorio Clínico",
+  "slogan": "En laboratorio, lo mejor.",
+  "description": "Laboratorio clínico en Guayaquil con atención en el local y toma de muestras a domicilio.",
+  "url": "https://www.lunalab.ec/",
+  "logo": "https://www.lunalab.ec/lunalab.png",
+  "image": "https://www.lunalab.ec/og-image.jpg",
+  "telephone": "+593998201218",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Gómez Rendón 4822 entre la 25ava y 26ava",
+    "addressLocality": "Guayaquil",
+    "addressRegion": "Guayas",
+    "addressCountry": "EC"
+  },
+  "areaServed": { "@type": "City", "name": "Guayaquil" },
+  "sameAs": ["https://www.instagram.com/lunalab06"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios de laboratorio",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hematología" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Química sanguínea" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Inmunología" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Exámenes de orina y heces" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pruebas de embarazo" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hormonas" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hemocultivo" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pruebas especiales" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Coagulación sanguínea" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Drogas" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cultivos microbiológicos" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pruebas COVID-19" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Toma de muestras a domicilio en Guayaquil" } }
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Luna Lab atiende a domicilio en Guayaquil?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sí. Además de atender en el laboratorio, hacemos visitas para tomar muestras en tu casa. Escríbenos por WhatsApp al +593 99 820 1218 para coordinar el día y la hora." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Dónde queda Luna Lab?",
+      "acceptedAnswer": { "@type": "Answer", "text": "En Gómez Rendón 4822, entre la 25ava y 26ava, Guayaquil, Ecuador." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Necesito ayuno para mi examen?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Depende del examen. Cuando agendas por WhatsApp te indicamos la preparación que necesitas." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué exámenes realizan?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Hematología, química sanguínea, inmunología, orina y heces, pruebas de embarazo, hormonas, hemocultivo, pruebas especiales, coagulación sanguínea, drogas, cultivos microbiológicos y pruebas COVID-19." }
+    }
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --luna: #2079AC;
+    --celeste: #5CB8D9;
+    --marino: #0E2C52;
+    --claro: #A9DDED;
+    --blanco: #FFFFFF;
+    --gris: #F0F3F5;
+    --texto: #1C2B40;
+    --whatsapp: #1FA855;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: var(--texto);
+    background: var(--blanco);
+    line-height: 1.6;
+  }
+  img { max-width: 100%; height: auto; }
+  a { color: var(--luna); }
+  a:focus-visible, button:focus-visible, summary:focus-visible {
+    outline: 3px solid var(--celeste);
+    outline-offset: 3px;
+  }
+
+  .contenedor { width: min(1080px, 100% - 2.5rem); margin-inline: auto; }
+
+  /* Encabezado */
+  .encabezado { background: var(--blanco); border-bottom: 1px solid var(--claro); }
+  .encabezado .contenedor {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 1rem; padding-block: 0.75rem;
+  }
+  .encabezado img { height: 72px; width: 72px; display: block; }
+  .menu { display: flex; align-items: center; gap: 1.5rem; }
+  .menu a { text-decoration: none; color: var(--marino); font-weight: 500; font-size: 0.95rem; }
+  .menu a:hover { color: var(--luna); }
+
+  /* Botones */
+  .boton {
+    display: inline-block; padding: 0.8rem 1.4rem; border-radius: 999px;
+    font-weight: 600; text-decoration: none; text-align: center;
+    border: 2px solid transparent; font-size: 1rem;
+  }
+  .boton-whatsapp { background: var(--whatsapp); color: var(--blanco); }
+  .boton-whatsapp:hover { background: #178a45; }
+  .boton-marino { background: var(--marino); color: var(--blanco); }
+  .boton-marino:hover { background: var(--luna); }
+  .boton-borde { border-color: var(--marino); color: var(--marino); background: transparent; }
+  .boton-borde:hover { background: var(--marino); color: var(--blanco); }
+
+  /* Portada */
+  .portada {
+    background: linear-gradient(180deg, var(--gris) 0%, var(--blanco) 100%);
+    overflow: hidden; position: relative;
+  }
+  .portada .contenedor {
+    display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2.5rem;
+    align-items: center; padding-block: 4rem 4.5rem; position: relative;
+  }
+  .portada h1 {
+    font-size: clamp(2rem, 4.6vw, 3.1rem); line-height: 1.15;
+    color: var(--marino); margin: 0 0 1rem; font-weight: 700;
+  }
+  .portada p.lead { font-size: 1.15rem; max-width: 34rem; margin: 0 0 1.75rem; }
+  .acciones { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+
+  /* La luna: media luna hecha solo con CSS, detrás del panel */
+  .luna {
+    position: absolute; right: -90px; top: -60px;
+    width: 420px; height: 420px; border-radius: 50%;
+    box-shadow: -48px 36px 0 0 var(--claro);
+    opacity: 0.55; pointer-events: none;
+  }
+
+  .panel {
+    background: var(--blanco); border: 1px solid var(--claro);
+    border-radius: 20px; padding: 1.5rem; position: relative;
+    box-shadow: 0 18px 40px rgba(14, 44, 82, 0.12);
+  }
+  .panel h2 { margin: 0 0 1rem; font-size: 1.1rem; color: var(--marino); }
+  .modo { padding: 1rem 0; border-top: 1px solid var(--gris); }
+  .modo:first-of-type { border-top: 0; padding-top: 0; }
+  .modo strong { display: block; color: var(--luna); font-size: 1.05rem; }
+  .modo span { font-size: 0.95rem; }
+
+  /* Secciones */
+  section { padding-block: 4rem; }
+  section h2.titulo {
+    font-size: clamp(1.6rem, 3.4vw, 2.2rem); color: var(--marino);
+    margin: 0 0 0.5rem; line-height: 1.2;
+  }
+  .intro { max-width: 40rem; margin: 0 0 2rem; }
+
+  /* Servicios: lista de dos columnas, sin tarjetas */
+  .servicios { display: grid; grid-template-columns: 1fr 1fr; column-gap: 3rem; margin: 0; padding: 0; list-style: none; }
+  .servicios li { padding: 0.9rem 0; border-bottom: 1px solid var(--claro); }
+  .servicios h3 { margin: 0; font-size: 1.05rem; color: var(--marino); }
+  .servicios p { margin: 0.1rem 0 0; font-size: 0.92rem; }
+
+  /* Domicilio */
+  .domicilio { background: var(--marino); color: var(--blanco); }
+  .domicilio h2.titulo { color: var(--blanco); }
+  .domicilio .intro { color: var(--claro); }
+  .pasos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin: 0 0 2rem; padding: 0; list-style: none; counter-reset: paso; }
+  .pasos li { counter-increment: paso; border-top: 3px solid var(--celeste); padding-top: 1rem; }
+  .pasos li::before { content: counter(paso); display: block; font-size: 2rem; font-weight: 700; color: var(--celeste); line-height: 1; margin-bottom: 0.5rem; }
+  .pasos strong { display: block; margin-bottom: 0.25rem; }
+
+  /* Preguntas */
+  .preguntas { background: var(--gris); }
+  details { background: var(--blanco); border: 1px solid var(--claro); border-radius: 12px; padding: 0.9rem 1.1rem; margin-bottom: 0.75rem; }
+  summary { cursor: pointer; font-weight: 600; color: var(--marino); }
+  details p { margin: 0.6rem 0 0; }
+
+  /* Contacto */
+  .contacto-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 2.5rem; align-items: start; }
+  .datos { margin: 0; padding: 0; list-style: none; }
+  .datos li { padding: 0.8rem 0; border-bottom: 1px solid var(--claro); }
+  .datos b { display: block; color: var(--marino); }
+  .mapa { width: 100%; height: 340px; border: 0; border-radius: 16px; background: var(--gris); }
+
+  /* Pie */
+  .pie { background: var(--marino); color: var(--claro); padding-block: 2rem; font-size: 0.9rem; }
+  .pie a { color: var(--blanco); }
+
+  /* Botón flotante de WhatsApp */
+  .flotante {
+    position: fixed; right: 1rem; bottom: 1rem; z-index: 10;
+    background: var(--whatsapp); color: var(--blanco); text-decoration: none;
+    padding: 0.8rem 1.2rem; border-radius: 999px; font-weight: 600;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  }
+
+  @media (max-width: 820px) {
+    .menu a.enlace { display: none; }
+    .portada .contenedor, .contacto-grid { grid-template-columns: 1fr; }
+    .servicios, .pasos { grid-template-columns: 1fr; }
+    .luna { width: 300px; height: 300px; right: -80px; top: -40px; }
+    .encabezado img { height: 60px; width: 60px; }
+  }
+</style>
+</head>
+
+<body>
+
+<header class="encabezado">
+  <div class="contenedor">
+    <img src="lunalab.png" alt="Luna Lab, laboratorio clínico en Guayaquil" width="72" height="72">
+    <nav class="menu" aria-label="Principal">
+      <a class="enlace" href="#servicios">Servicios</a>
+      <a class="enlace" href="#domicilio">A domicilio</a>
+      <a class="enlace" href="#contacto">Dónde estamos</a>
+      <a class="boton boton-whatsapp" href="https://wa.me/593998201218?text=Hola%20Luna%20Lab%2C%20quiero%20agendar%20un%20examen." rel="noopener">Agendar</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="portada" aria-labelledby="titulo-principal">
+  <div class="luna" aria-hidden="true"></div>
+  <div class="contenedor">
+    <div>
+      <h1 id="titulo-principal">Exámenes de laboratorio en Guayaquil, en nuestro local o en tu casa</h1>
+      <p class="lead">En Luna Lab hacemos tus análisis clínicos con atención cercana. Escríbenos por WhatsApp y coordinamos el día y la hora.</p>
+      <div class="acciones">
+        <a class="boton boton-whatsapp" href="https://wa.me/593998201218?text=Hola%20Luna%20Lab%2C%20quiero%20agendar%20una%20visita%20a%20domicilio." rel="noopener">Agendar visita a domicilio</a>
+        <a class="boton boton-borde" href="#contacto">Cómo llegar al laboratorio</a>
       </div>
-      <div class="footer-detail">
-        <span class="footer-label">VISÍTANOS</span>
-        <p>Gómez Rendón 4822, entre la 25ava y 26ava<br />Guayaquil, Ecuador</p>
+    </div>
+
+    <aside class="panel" aria-label="Formas de atención">
+      <h2>Dos formas de atenderte</h2>
+      <div class="modo">
+        <strong>En el laboratorio</strong>
+        <span>Gómez Rendón 4822 entre la 25ava y 26ava, Guayaquil.</span>
       </div>
-      <a class="footer-link" href="https://wa.me/593998201218" target="_blank" rel="noreferrer">
-        Solicitar por WhatsApp <span aria-hidden="true">↗</span>
-      </a>
-    </footer>
-  </body>
+      <div class="modo">
+        <strong>A domicilio</strong>
+        <span>Vamos a tu casa a tomar la muestra. Consulta tu sector por WhatsApp.</span>
+      </div>
+      <a class="boton boton-marino" style="width:100%" href="tel:+593998201218">Llamar al 099 820 1218</a>
+    </aside>
+  </div>
+</section>
+
+<section id="servicios" aria-labelledby="titulo-servicios">
+  <div class="contenedor">
+    <h2 class="titulo" id="titulo-servicios">Servicios de laboratorio clínico</h2>
+    <p class="intro">Si no ves el examen que buscas, escríbenos y te confirmamos si lo realizamos.</p>
+    <ul class="servicios">
+      <li><h3>Hematología</h3><p>Estudio de las células de la sangre.</p></li>
+      <li><h3>Química sanguínea</h3><p>Medición de sustancias en la sangre.</p></li>
+      <li><h3>Inmunología</h3><p>Análisis relacionados con las defensas del cuerpo.</p></li>
+      <li><h3>Exámenes de orina y heces</h3><p>Análisis de muestras de orina y de heces.</p></li>
+      <li><h3>Pruebas de embarazo</h3><p>Detección de embarazo con resultado confiable.</p></li>
+      <li><h3>Hormonas</h3><p>Análisis hormonales por indicación médica.</p></li>
+      <li><h3>Hemocultivo</h3><p>Búsqueda de microorganismos en la sangre.</p></li>
+      <li><h3>Pruebas especiales</h3><p>Exámenes de mayor especialidad.</p></li>
+      <li><h3>Coagulación sanguínea</h3><p>Evaluación de cómo coagula tu sangre.</p></li>
+      <li><h3>Drogas</h3><p>Pruebas de detección de sustancias.</p></li>
+      <li><h3>Cultivos microbiológicos</h3><p>Identificación de bacterias y hongos.</p></li>
+      <li><h3>Pruebas COVID-19</h3><p>Detección de COVID-19.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section id="domicilio" class="domicilio" aria-labelledby="titulo-domicilio">
+  <div class="contenedor">
+    <h2 class="titulo" id="titulo-domicilio">Toma de muestras a domicilio en Guayaquil</h2>
+    <p class="intro">Si no puedes venir al laboratorio, vamos nosotros. Así se agenda:</p>
+    <ol class="pasos">
+      <li><strong>Escríbenos por WhatsApp</strong>Cuéntanos qué examen necesitas y tu sector.</li>
+      <li><strong>Coordinamos la visita</strong>Acordamos el día y la hora que te convengan.</li>
+      <li><strong>Tomamos la muestra</strong>Te visitamos en casa y te avisamos cuando tus resultados estén listos.</li>
+    </ol>
+    <a class="boton boton-whatsapp" href="https://wa.me/593998201218?text=Hola%20Luna%20Lab%2C%20necesito%20toma%20de%20muestras%20a%20domicilio." rel="noopener">Pedir visita por WhatsApp</a>
+  </div>
+</section>
+
+<section id="preguntas" class="preguntas" aria-labelledby="titulo-preguntas">
+  <div class="contenedor">
+    <h2 class="titulo" id="titulo-preguntas">Preguntas frecuentes</h2>
+    <p class="intro">Lo que más nos preguntan antes de agendar.</p>
+    <details>
+      <summary>¿Atienden a domicilio en Guayaquil?</summary>
+      <p>Sí. Además de atender en el laboratorio, hacemos visitas para tomar muestras en tu casa. Escríbenos al +593 99 820 1218 para coordinar.</p>
+    </details>
+    <details>
+      <summary>¿Dónde queda Luna Lab?</summary>
+      <p>En Gómez Rendón 4822, entre la 25ava y 26ava, Guayaquil, Ecuador.</p>
+    </details>
+    <details>
+      <summary>¿Necesito ayuno para mi examen?</summary>
+      <p>Depende del examen. Cuando agendas por WhatsApp te indicamos la preparación que necesitas.</p>
+    </details>
+    <details>
+      <summary>¿Qué exámenes realizan?</summary>
+      <p>Hematología, química sanguínea, inmunología, orina y heces, embarazo, hormonas, hemocultivo, pruebas especiales, coagulación, drogas, cultivos microbiológicos y COVID-19.</p>
+    </details>
+  </div>
+</section>
+
+<section id="contacto" aria-labelledby="titulo-contacto">
+  <div class="contenedor contacto-grid">
+    <div>
+      <h2 class="titulo" id="titulo-contacto">Dónde estamos</h2>
+      <ul class="datos">
+        <li><b>Dirección</b>Gómez Rendón 4822 entre la 25ava y 26ava, Guayaquil, Ecuador</li>
+        <li><b>WhatsApp y teléfono</b><a href="https://wa.me/593998201218" rel="noopener">+593 99 820 1218</a></li>
+        <li><b>Instagram</b><a href="https://www.instagram.com/lunalab06" rel="noopener">@lunalab06</a></li>
+      </ul>
+      <p><a class="boton boton-marino" href="https://www.google.com/maps/search/?api=1&amp;query=G%C3%B3mez+Rend%C3%B3n+4822+Guayaquil+Ecuador" rel="noopener">Abrir en Google Maps</a></p>
+    </div>
+    <iframe class="mapa" title="Mapa de Luna Lab en Guayaquil" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      src="https://maps.google.com/maps?q=G%C3%B3mez%20Rend%C3%B3n%204822%2C%20Guayaquil%2C%20Ecuador&amp;output=embed"></iframe>
+  </div>
+</section>
+
+</main>
+
+<footer class="pie">
+  <div class="contenedor">
+    <p><strong>Luna Lab</strong> · En laboratorio, lo mejor. · Laboratorio clínico en Guayaquil, Ecuador.</p>
+    <p>Los resultados de laboratorio deben ser interpretados por un profesional de la salud.</p>
+  </div>
+</footer>
+
+<a class="flotante" href="https://wa.me/593998201218?text=Hola%20Luna%20Lab%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n." rel="noopener" aria-label="Escribir por WhatsApp">WhatsApp</a>
+
+</body>
 </html>

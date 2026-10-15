@@ -1,0 +1,14 @@
+{
+  "name": "Luna Lab",
+  "short_name": "Luna Lab",
+  "description": "Laboratorio clínico en Guayaquil, en el local y a domicilio.",
+  "lang": "es-EC",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#FFFFFF",
+  "theme_color": "#0E2C52",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
